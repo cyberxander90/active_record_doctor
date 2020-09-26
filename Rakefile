@@ -20,6 +20,7 @@ require 'rake/testtask'
 
 Rake::TestTask.new(:test) do |t|
   t.libs = ['lib', 'test']
+  t.ruby_opts = ['-rsetup']
   t.pattern = 'test/**/*_test.rb'
   t.verbose = false
 end
